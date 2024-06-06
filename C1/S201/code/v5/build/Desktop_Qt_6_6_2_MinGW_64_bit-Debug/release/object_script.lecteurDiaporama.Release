@@ -1,0 +1,17 @@
+release/choixdiaporama.o
+release/choixvitessedefilement.o
+release/fenetreapropos.o
+release/main.o
+release/lecteurvue.o
+release/modelelecteur.o
+release/presentationlecteur.o
+release/lecteur.o
+release/diaporama.o
+release/imagedansdiaporama.o
+release/qrc_images.o
+release/moc_choixdiaporama.o
+release/moc_choixvitessedefilement.o
+release/moc_fenetreapropos.o
+release/moc_lecteurvue.o
+release/moc_modelelecteur.o
+release/moc_presentationlecteur.o

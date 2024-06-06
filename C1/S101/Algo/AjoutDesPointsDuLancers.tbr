@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>AjoutDesPointsDuLancers</nom>
+  <date_creation>17/10/2023 11:48</date_creation>
+  <Elements>
+    <Action>
+      <Position>1614;234</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>scoreJoueurMach,
+scoreJoueurHum,
+scoreLancerCourant,</PreAssertion>
+      <PostAssertion>scoreJoueurHum,
+scoreJoueurMach,</PostAssertion>
+      <Titre>Ajout des points du lancer courant au score du joueur</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Condition>
+          <Position>1854.5;402</Position>
+          <StyleLien>0</StyleLien>
+          <estUnique>0</estUnique>
+          <operationsLogiques>
+            <operation>
+              <Titre>i%2 = 0</Titre>
+              <Enfants>
+                <Action>
+                  <Position>1277;522</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>scoreJoueurHum,
+scoreLancerCourant,</PreAssertion>
+                  <PostAssertion>scoreJoueurHum,</PostAssertion>
+                  <Titre>scoreJoueurHum += scoreLancerCourant</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+            <operation>
+              <Titre>Sinon</Titre>
+              <Enfants>
+                <Action>
+                  <Position>1964;557</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>scoreJoueurMach,
+scoreLancerCourant,</PreAssertion>
+                  <PostAssertion>scoreJoueurMach,</PostAssertion>
+                  <Titre>scoreJoueurMach += scoreLancerCourant</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+          </operationsLogiques>
+        </Condition>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

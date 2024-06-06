@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Switch2</nom>
+  <date_creation>17/10/2023 11:59</date_creation>
+  <Elements>
+    <ConditionMultiple>
+      <Position>842.5;48</Position>
+      <StyleLien>0</StyleLien>
+      <Titre>dé</Titre>
+      <operationsLogiques>
+        <operation>
+          <Titre>2</Titre>
+          <Enfants>
+            <Condition>
+              <Position>644.5;188</Position>
+              <StyleLien>1</StyleLien>
+              <estUnique>1</estUnique>
+              <operationsLogiques>
+                <operation>
+                  <Titre>si verifBateau est vrai et verifEquipage est vrai et verifCapitaine est vrai </Titre>
+                  <Enfants>
+                    <Action>
+                      <Position>736;318</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>scoreLancerCourant,</PostAssertion>
+                      <Titre>scoreLancerCourant += 2</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                  </Enfants>
+                </operation>
+                <operation>
+                  <Titre>Sinon</Titre>
+                  <Enfants/>
+                </operation>
+              </operationsLogiques>
+            </Condition>
+          </Enfants>
+        </operation>
+      </operationsLogiques>
+    </ConditionMultiple>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

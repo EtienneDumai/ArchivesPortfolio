@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>InitialiserLaPartie</nom>
+  <date_creation>17/10/2023 11:49</date_creation>
+  <Elements>
+    <Action>
+      <Position>584;1</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>?</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>Jeu de l'équipage
+</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>583;117</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>∅</PreAssertion>
+          <PostAssertion>PNT_BATEAU,
+PNT_CAPITAINE,
+PNT_EQUIPAGE,
+compteurManche,
+pseudoHum,</PostAssertion>
+          <Titre>Initialiser la partie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Action>
+              <Position>217;296</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>PNT_BATEAU,
+PNT_CAPITAINE,
+PNT_EQUIPAGE,</PostAssertion>
+              <Titre>Définir les points </Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>185;417</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>PNT_BATEAU,
+PNT_CAPITAINE,
+PNT_EQUIPAGE,</PostAssertion>
+                  <Titre>PNT_BATEAU← 600
+PNT_CAPITAINE← 500	
+PNT_EQUIPAGE← 400
+
+</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>541;291</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>compteurManche</PostAssertion>
+              <Titre>Initialiser le compteur de manche</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>577;414</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>compteurManche</PostAssertion>
+                  <Titre>compteurManche← 0</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>1065;286</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>pseudoHum</PostAssertion>
+              <Titre>Choisir le pseudo de l'humain</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>946;415</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>Afficher " Quel pseudo voulez-vous choisir ?"</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1380;423</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>pseudoHum</PostAssertion>
+                  <Titre>Saisir le pseudo</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

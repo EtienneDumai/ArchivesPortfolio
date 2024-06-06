@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>VerifierArret</nom>
+  <date_creation>17/10/2023 12:05</date_creation>
+  <Elements>
+    <Action>
+      <Position>724;169</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>continuer,</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>Verifier arrêt</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Condition>
+          <Position>791.5;291</Position>
+          <StyleLien>1</StyleLien>
+          <estUnique>1</estUnique>
+          <operationsLogiques>
+            <operation>
+              <Titre>si continuer = faux</Titre>
+              <Enfants>
+                <Sortie>
+                  <Position>863;434</Position>
+                </Sortie>
+              </Enfants>
+            </operation>
+            <operation>
+              <Titre>Sinon</Titre>
+              <Enfants/>
+            </operation>
+          </operationsLogiques>
+        </Condition>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

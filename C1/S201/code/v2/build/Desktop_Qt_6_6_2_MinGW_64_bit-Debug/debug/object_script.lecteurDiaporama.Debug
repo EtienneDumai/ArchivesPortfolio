@@ -1,0 +1,10 @@
+debug/main.o
+debug/lecteurvue.o
+debug/modelelecteur.o
+debug/presentationlecteur.o
+debug/lecteur.o
+debug/diaporama.o
+debug/imagedansdiaporama.o
+debug/moc_lecteurvue.o
+debug/moc_modelelecteur.o
+debug/moc_presentationlecteur.o

@@ -1,0 +1,10 @@
+release/main.o
+release/lecteurvue.o
+release/modelelecteur.o
+release/presentationlecteur.o
+release/diaporama.o
+release/imagedansdiaporama.o
+release/image.o
+release/moc_lecteurvue.o
+release/moc_modelelecteur.o
+release/moc_presentationlecteur.o

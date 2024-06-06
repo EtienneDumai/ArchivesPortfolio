@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>JouerLaPartie</nom>
+  <date_creation>17/10/2023 11:59</date_creation>
+  <Elements>
+    <Action>
+      <Position>603;37</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>pntBateau=600
+pntCapitaine=500	
+pntEquipage=400
+</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>Jeu de l'équipage
+</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>671;159</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>pseudoHum
+compteurManche
+scoreJoueurMach
+scoreJoueurHum
+equipHum
+equipMach
+</PreAssertion>
+          <PostAssertion>pseudoHum
+scoreJoueurHum
+scoreJoueurMach
+continuer</PostAssertion>
+          <Titre>Jouer la partie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Action>
+              <Position>648;274</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>verifBateau,
+ verifCapitaine,
+ verifEquipage,
+ scoreLancerCourant,
+scoreJoueurMach
+scoreJoueurHum
+</PreAssertion>
+              <PostAssertion>pseudoHum
+scoreJoueurHum
+scoreJoueurMach
+continuer</PostAssertion>
+              <Titre>Jouer la partie</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>671;396</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>PNT_BATEAU,
+PNT_CAPITAINE,
+PNT_EQUIPAGE,</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>Jouer la partie</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants>
+                    <Iteration>
+                      <Position>851.5;519.5</Position>
+                      <StyleLien>1</StyleLien>
+                      <Titre>?</Titre>
+                      <IterationFixe>0</IterationFixe>
+                      <Enfants>
+                        <Action>
+                          <Position>665;593</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>pseudoHum
+compteurManche
+scoreJoueurMach
+scoreJoueurHum
+equipHum
+equipMach
+</PreAssertion>
+                          <PostAssertion>pseudoHum
+scoreJoueurHum
+scoreJoueurMach</PostAssertion>
+                          <Titre>Jouer la Manche</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </Iteration>
+                  </Enfants>
+                </Action>
+              </Enfants>
+            </Action>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>JouerLaManche</nom>
+  <date_creation>17/10/2023 11:53</date_creation>
+  <Elements>
+    <Action>
+      <Position>669;21</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>pseudoHum,
+compteurManche,
+scoreJoueurMach,
+scoreJoueurHum,
+equipHum,
+equipMach,
+</PreAssertion>
+      <PostAssertion>pseudoHum,
+scoreJoueurHum,
+scoreJoueurMach,</PostAssertion>
+      <Titre>Jouer la Manche</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>0</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>647;154</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>verifBateau,
+ verifCapitaine,
+ verifEquipage,
+ scoreLancerCourant,</PreAssertion>
+          <PostAssertion>pseudoHum,
+scoreJoueurHum,
+scoreJoueurMach,</PostAssertion>
+          <Titre>Jouer la Manche</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
+          <Enfants>
+            <Action>
+              <Position>6;310</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>pseudoHum,
+scoreJoueurHum,
+scoreJoueurMach,</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>Afficher "Bilan partiel AVANT la nouvelle manche : "
+ "- score" pseudoHum " = " scoreJoueurHum
+ "- score Machine = " scoreJoueurMach</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>545;312</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>compteurManche,</PreAssertion>
+              <PostAssertion>compteurManche,
+pseudoHum,</PostAssertion>
+              <Titre>Détérminer le joueur</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>1054;314</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>Jouer les lancers</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>1329;310</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>continuer,</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>Verifier arrêt</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Condition>
+                  <Position>1411.5;429</Position>
+                  <StyleLien>1</StyleLien>
+                  <estUnique>1</estUnique>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>continuer= faux</Titre>
+                      <Enfants>
+                        <Sortie>
+                          <Position>1350;527</Position>
+                        </Sortie>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>Sinon</Titre>
+                      <Enfants/>
+                    </operation>
+                  </operationsLogiques>
+                </Condition>
+              </Enfants>
+            </Action>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

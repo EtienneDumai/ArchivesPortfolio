@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Switch6</nom>
+  <date_creation>17/10/2023 12:04</date_creation>
+  <Elements>
+    <ConditionMultiple>
+      <Position>847.5;2</Position>
+      <StyleLien>1</StyleLien>
+      <Titre>dé</Titre>
+      <operationsLogiques>
+        <operation>
+          <Titre>6</Titre>
+          <Enfants>
+            <Condition>
+              <Position>420.5;128</Position>
+              <StyleLien>1</StyleLien>
+              <estUnique>1</estUnique>
+              <operationsLogiques>
+                <operation>
+                  <Titre>si verifBateau est faux et verifEquipage est faux et verifCapitaine est faux</Titre>
+                  <Enfants>
+                    <Action>
+                      <Position>513;258</Position>
+                      <StyleLien>2</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>verifBateau,</PostAssertion>
+                      <Titre>verifBateau←true
+</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants>
+                        <Condition>
+                          <Position>550.5;378</Position>
+                          <StyleLien>0</StyleLien>
+                          <estUnique>0</estUnique>
+                          <operationsLogiques>
+                            <operation>
+                              <Titre>i%2 = 0 </Titre>
+                              <Enfants>
+                                <Action>
+                                  <Position>42;493</Position>
+                                  <StyleLien>1</StyleLien>
+                                  <PreAssertion>scoreLancerCourant,
+PNT_BATEAU,</PreAssertion>
+                                  <PostAssertion>equipHum,
+scoreLancerCourant,</PostAssertion>
+                                  <Titre>equipHum="Bateau"
+scoreLancercourant = + PNT_BATEAU
+</Titre>
+                                  <DetailsVisible>1</DetailsVisible>
+                                  <DetailsVideVisible>1</DetailsVideVisible>
+                                  <Enfants/>
+                                </Action>
+                              </Enfants>
+                            </operation>
+                            <operation>
+                              <Titre>Sinon</Titre>
+                              <Enfants>
+                                <Action>
+                                  <Position>638;492</Position>
+                                  <StyleLien>1</StyleLien>
+                                  <PreAssertion>scoreLancerCourant,
+PNT_BATEAU,</PreAssertion>
+                                  <PostAssertion>equipMach,
+scoreLancerCourant,</PostAssertion>
+                                  <Titre>equipMach="Bateau"
+scoreLancerCourant +=  PNT_BATEAU</Titre>
+                                  <DetailsVisible>1</DetailsVisible>
+                                  <DetailsVideVisible>1</DetailsVideVisible>
+                                  <Enfants/>
+                                </Action>
+                              </Enfants>
+                            </operation>
+                          </operationsLogiques>
+                        </Condition>
+                      </Enfants>
+                    </Action>
+                  </Enfants>
+                </operation>
+                <operation>
+                  <Titre>Sinon</Titre>
+                  <Enfants/>
+                </operation>
+              </operationsLogiques>
+            </Condition>
+            <Condition>
+              <Position>907.5;129</Position>
+              <StyleLien>1</StyleLien>
+              <estUnique>1</estUnique>
+              <operationsLogiques>
+                <operation>
+                  <Titre>si verifBateau est vrai et verifEquipage est vrai et verifCapitaine est vrai </Titre>
+                  <Enfants>
+                    <Action>
+                      <Position>1004;260</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>scoreLancerCourant,</PostAssertion>
+                      <Titre>scoreLancerCourant += 6</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                  </Enfants>
+                </operation>
+                <operation>
+                  <Titre>Sinon</Titre>
+                  <Enfants/>
+                </operation>
+              </operationsLogiques>
+            </Condition>
+          </Enfants>
+        </operation>
+      </operationsLogiques>
+    </ConditionMultiple>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

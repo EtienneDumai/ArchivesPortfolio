@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Tirer5NombresAleatoire</nom>
+  <date_creation>17/10/2023 12:05</date_creation>
+  <Elements>
+    <Action>
+      <Position>240;22</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>scoreLancerCourant,
+PNT_BATEAU,
+PNT_EQUIPAGE,
+PNT_CAPITAINE,</PreAssertion>
+      <PostAssertion>equipMach,
+equipHum,
+scoreLancerCourant,
+verifBateau,
+verifCapitaine,
+verifEquipage,</PostAssertion>
+      <Titre>Tirer 5 nombres aléatoire de 1 à 6</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Iteration>
+          <Position>463.5;186.5</Position>
+          <StyleLien>1</StyleLien>
+          <Titre>Pour k allant de 1 à 5</Titre>
+          <IterationFixe>1</IterationFixe>
+          <Enfants>
+            <Action>
+              <Position>530;275</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>scoreLancerCourant,
+PNT_BATEAU,
+PNT_EQUIPAGE,
+PNT_CAPITAINE,</PreAssertion>
+              <PostAssertion>equipMach,
+equipHum,
+scoreLancerCourant,
+verifBateau,
+verifCapitaine,
+verifEquipage,</PostAssertion>
+              <Titre>Ajouter les points en fonction du nombre du dé</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <ConditionMultiple>
+                  <Position>723.5;388</Position>
+                  <StyleLien>0</StyleLien>
+                  <Titre>dé</Titre>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>6</Titre>
+                      <Enfants/>
+                    </operation>
+                    <operation>
+                      <Titre>5</Titre>
+                      <Enfants/>
+                    </operation>
+                    <operation>
+                      <Titre>4</Titre>
+                      <Enfants/>
+                    </operation>
+                    <operation>
+                      <Titre>3</Titre>
+                      <Enfants/>
+                    </operation>
+                    <operation>
+                      <Titre>2</Titre>
+                      <Enfants/>
+                    </operation>
+                    <operation>
+                      <Titre>1</Titre>
+                      <Enfants/>
+                    </operation>
+                  </operationsLogiques>
+                </ConditionMultiple>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>73;298</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>nombreAléa,</PostAssertion>
+              <Titre>Tirer un nombre aléatoire</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>36;424</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>nombreAléa,</PreAssertion>
+                  <PostAssertion>dé,</PostAssertion>
+                  <Titre>dé ← nombreAléa</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+          </Enfants>
+        </Iteration>
+      </Enfants>
+    </Action>
+    <Iteration>
+      <Position>2318.5;747.5</Position>
+      <StyleLien>1</StyleLien>
+      <Titre>Pour k allant de 1 à 5</Titre>
+      <IterationFixe>1</IterationFixe>
+      <Enfants/>
+    </Iteration>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

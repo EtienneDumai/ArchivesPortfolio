@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>JouerLesLancers</nom>
+  <date_creation>17/10/2023 11:56</date_creation>
+  <Elements>
+    <Action>
+      <Position>428;32</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>verifBateau,
+ verifCapitaine,
+ verifEquipage,
+ scoreLancerCourant,
+scoreJoueurMach,
+scoreJoueurHum,
+</PreAssertion>
+      <PostAssertion>scoreJoueurhum,
+scorejoueurMach,
+continuer,</PostAssertion>
+      <Titre>Jouer les Lancers</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>456;157</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>PNT_BATEAU,
+PNT_EQUIPAGE,
+PNT_CAPITAINE,
+equipHum,
+equipMach,
+pseudoHum,</PreAssertion>
+          <PostAssertion>equipMach,
+equipHum,
+scoreLancerCourant,
+verifBateau,
+verifCapitaine,
+verifEquipage,</PostAssertion>
+          <Titre>Jouer les lancers</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Iteration>
+              <Position>639.5;286.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>Pour j allant de 1 a 3</Titre>
+              <IterationFixe>1</IterationFixe>
+              <Enfants>
+                <Action>
+                  <Position>115;408</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>j,</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher "Lancer #" j</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1095;393</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>scoreJoueurMach,
+scoreJoueurHum,
+scoreLancerCourant,</PreAssertion>
+                  <PostAssertion>scoreJoueurHum,
+scoreJoueurMach,</PostAssertion>
+                  <Titre>Ajout des points du lancer courant au score du joueur</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1560;545</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>equipHum,
+scoreLancerCourant,
+pseudoHum,
+scoreJoueurHum,
+reponse,</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>Fin de chaque lancer</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>431;403</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>scoreLancerCourant,
+PNT_BATEAU,
+PNT_EQUIPAGE,
+PNT_CAPITAINE,</PreAssertion>
+                  <PostAssertion>equipMach,
+equipHum,
+scoreLancerCourant,
+verifBateau,
+verifCapitaine,
+verifEquipage,</PostAssertion>
+                  <Titre>Tirer 5 nombres aléatoires de 1 à 6</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Iteration>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

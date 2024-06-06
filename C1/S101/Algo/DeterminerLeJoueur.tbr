@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>DeterminerLeJoueur</nom>
+  <date_creation>17/10/2023 11:47</date_creation>
+  <Elements>
+    <Action>
+      <Position>637;16</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>compteurManche,</PreAssertion>
+      <PostAssertion>compteurManche,
+pseudoHum,</PostAssertion>
+      <Titre>Détérminer le joueur</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Condition>
+          <Position>771.5;131</Position>
+          <StyleLien>0</StyleLien>
+          <estUnique>0</estUnique>
+          <operationsLogiques>
+            <operation>
+              <Titre>i%2 = 0 </Titre>
+              <Enfants>
+                <Condition>
+                  <Position>527.5;242</Position>
+                  <StyleLien>0</StyleLien>
+                  <estUnique>0</estUnique>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>compteurManche &lt; 3</Titre>
+                      <Enfants>
+                        <Action>
+                          <Position>477;426</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>compteurManche,
+pseudoHum,</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Afficher "manche #" compteurManche " joueur " pseudoHum</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>1</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Action>
+                          <Position>23;389</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>compteurManche,</PreAssertion>
+                          <PostAssertion>compteurManche,</PostAssertion>
+                          <Titre>compteurManche = +1</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>1</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>Sinon</Titre>
+                      <Enfants>
+                        <Sortie>
+                          <Position>861;367</Position>
+                        </Sortie>
+                      </Enfants>
+                    </operation>
+                  </operationsLogiques>
+                </Condition>
+              </Enfants>
+            </operation>
+            <operation>
+              <Titre>Sinon</Titre>
+              <Enfants>
+                <Action>
+                  <Position>815;249</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>compteurManche,</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher "manche #" compteurManche " joueur Machine"</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+          </operationsLogiques>
+        </Condition>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>

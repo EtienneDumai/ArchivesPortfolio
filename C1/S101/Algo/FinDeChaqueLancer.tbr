@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>FinDeChaqueLancer</nom>
+  <date_creation>17/10/2023 12:07</date_creation>
+  <Elements>
+    <Action>
+      <Position>721;4</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>equipHum,
+scoreLancerCourant,
+pseudoHum,
+scoreJoueurHum,
+reponse,</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>Fin de chaque lancer</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Condition>
+          <Position>855.5;111</Position>
+          <StyleLien>0</StyleLien>
+          <estUnique>0</estUnique>
+          <operationsLogiques>
+            <operation>
+              <Titre>i%2 est égal à 0</Titre>
+              <Enfants>
+                <Action>
+                  <Position>95;208</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher 
+"Voulez-vous continuer ?  (O/N)"</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>725;251</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>reponse,</PreAssertion>
+                  <PostAssertion>continuer,</PostAssertion>
+                  <Titre>Saisie</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants>
+                    <ConditionMultiple>
+                      <Position>763.5;363</Position>
+                      <StyleLien>0</StyleLien>
+                      <Titre>reponse</Titre>
+                      <operationsLogiques>
+                        <operation>
+                          <Titre>"O" ou "o"</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>572;461</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>∅</PreAssertion>
+                              <PostAssertion>continuer,</PostAssertion>
+                              <Titre>continuer ← vrai</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>1</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                          </Enfants>
+                        </operation>
+                        <operation>
+                          <Titre>"N" ou "n"</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>880;463</Position>
+                              <StyleLien>2</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>continuer,</PostAssertion>
+                              <Titre>continuer ← False</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>1</DetailsVideVisible>
+                              <Enfants>
+                                <Sortie>
+                                  <Position>991;591</Position>
+                                </Sortie>
+                              </Enfants>
+                            </Action>
+                          </Enfants>
+                        </operation>
+                      </operationsLogiques>
+                    </ConditionMultiple>
+                  </Enfants>
+                </Action>
+                <Action>
+                  <Position>115;315</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>equipHum,
+scoreLancerCourant,
+pseudoHum,
+scoreJoueurHum,</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher "Contenu du lancer : " Dès tirées avant
+"Bilan du lancer : "
+"- Equipement =" equiHum
+"- Score du lancer =" scoreLancerCourant
+"- Nouveau Score pour " pseudoHum "=" scoreJoueurHum
+
+</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+            <operation>
+              <Titre>Sinon</Titre>
+              <Enfants>
+                <Action>
+                  <Position>1022;216</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>equipMach,
+scoreLancerCourant,
+scoreJoueurMach,</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher "Contenu du lancer : " Dès tirées avant
+"Bilan du lancer : "
+"- Equipement =" equipMach
+"- Score du lancer =" scoreLancerCourant
+"- Nouveau Score pour Machine =" scoreJoueurMach
+</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+          </operationsLogiques>
+        </Condition>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>
