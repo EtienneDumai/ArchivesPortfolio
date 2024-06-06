@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Algorithme</nom>
+  <date_creation>11/1/2024 09:27</date_creation>
+  <Elements>
+    <Action>
+      <Position>152;66</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>char tableau[NB_CASES][NB_CASES]</PreAssertion>
+      <PostAssertion>∅</PostAssertion>
+      <Titre>genererTableau</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Iteration>
+          <Position>436.5;213.5</Position>
+          <StyleLien>1</StyleLien>
+          <Titre>Pour indiceBateau de indiceTableau1=0 à NB_CASES, crois</Titre>
+          <IterationFixe>1</IterationFixe>
+          <Enfants>
+            <Iteration>
+              <Position>428.5;314.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>Pour indiceBateau de indiceTableau2=0 à NB_CASES, crois</Titre>
+              <IterationFixe>1</IterationFixe>
+              <Enfants>
+                <Action>
+                  <Position>336;395</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>tableau</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>tableau[indiceTableau1][indiceTableau2]← ' '</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Iteration>
+          </Enfants>
+        </Iteration>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>
